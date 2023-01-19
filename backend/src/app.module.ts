@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { JwtModule } from './jwt/jwt.module';
 import { BlogModule } from './blog/blog.module';
 import { ProfileModule } from './profile/profile.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ProfileModule } from './profile/profile.module';
     JwtModule,
     BlogModule,
     ProfileModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

@@ -1,12 +1,9 @@
 import { IsNumber, IsString } from 'class-validator';
 
-class CreateBlogDao {
+class CreateBlogDbo {
   @IsString()
   title: string;
 
   @IsString()
   content: string;
-
-  @IsNumber()
-  userId: number;
 }
