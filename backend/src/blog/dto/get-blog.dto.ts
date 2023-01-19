@@ -1,3 +1,4 @@
+import { ApiProperty } from '@nestjs/swagger';
 import {
   IsArray,
   IsNotEmpty,
@@ -7,18 +8,22 @@ import {
 } from 'class-validator';
 
 class GetBlogDto {
+  @ApiProperty()
   @IsNumber()
   @IsNotEmpty()
   id: number;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   title: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsString()
   body: string;
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsArray()
   comments: {
@@ -26,6 +31,7 @@ class GetBlogDto {
     comment: string;
   }[];
 
+  @ApiProperty()
   @IsNotEmpty()
   @IsObject()
   author: {
