@@ -5,7 +5,6 @@ import {
   Body,
   Param,
   ParseIntPipe,
-  Redirect,
   UseGuards,
 } from '@nestjs/common';
 import { UserService } from './user.service';
@@ -18,7 +17,6 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Post('/register')
-  @Redirect('/users/login', 302)
   async register(@Body() createUserDto: CreateUserDto) {
     await this.userService.register(createUserDto);
   }

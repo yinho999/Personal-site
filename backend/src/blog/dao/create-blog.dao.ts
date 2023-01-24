@@ -5,8 +5,10 @@ class CreateBlogDao {
   title: string;
 
   @IsString()
-  content: string;
+  body: string;
 
   @IsNumber()
   userId: number;
 }
+
+export { CreateBlogDao };

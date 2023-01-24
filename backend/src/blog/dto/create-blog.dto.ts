@@ -8,7 +8,7 @@ class CreateBlogDto {
 
   @ApiProperty()
   @IsString()
-  content: string;
+  body: string;
 }
 
 export default CreateBlogDto;
